@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Eigenbaukombinat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+<script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
+    </head>
+    <body>
+            <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+<script type='text/javascript'>
+	google.load('visualization', '1.1', {'packages':['annotationchart']});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('date', 'Date');
+        data.addColumn('number', 'Eintritte');
+        data.addColumn('string', 'Eintritte Anzahl');
+        data.addColumn('number', 'Austritte');
+        data.addColumn('string', 'Austritte Anzahl');
+        data.addColumn('number', 'Total');
+        data.addRows([
+		
+##DATA##
+								
+        ]);
+
+        var chart = new google.visualization.AnnotationChart(document.getElementById('chart_div'));
+
+        var options = {
+        	'displayAnnotations': true,
+            'height': 700,
+            'width': 1140
+        };
+
+        chart.draw(data, options);
+	}
+</script>
+    
+		
+		<div id="chart_div"></div>
+	        </body>
+</html>

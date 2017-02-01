@@ -87,3 +87,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+collmex.ini
+index.html
+
