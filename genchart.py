@@ -20,7 +20,7 @@ for member in collmex.get_members():
         austritte[aus].append(nr)
 
 
-zeitpunkte = set(eintritte.keys() + austritte.keys())
+zeitpunkte = set(list(eintritte.keys()) + list(austritte.keys()))
 
 total_ein = 0
 total_aus = 0
@@ -46,7 +46,7 @@ for zp in sorted(zeitpunkte):
         einmems=einmems_str, total=total, ausmems=ausmems_str,
         total_aus=total_aus))
 
-with open('index.html', 'w') as outfile:
+with open('memberchart.html', 'w') as outfile:
     with open('index.html.in') as template:
         for line in template.readlines():
             if '##DATA##' in line:
