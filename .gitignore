@@ -90,4 +90,8 @@ ENV/
 
 collmex.ini
 index.html
-
+bin
+include
+local
+memberchart.html
+update_chart.sh
